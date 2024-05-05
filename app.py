@@ -39,7 +39,7 @@ def redirect_to_long_url(short_code):
     result = urls_collection.find_one({'short_code': short_code})
     if result:
         long_url = result['long_url']
-        return redirect(long_url, code=302)
+        return redirect("https://"+long_url)
     else:
         return 'Short URL not found', 404
 
