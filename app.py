@@ -5,7 +5,7 @@ from pymongo import MongoClient
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/*": {"origins": "https://urlsshorten.netlify.app"}})
 client = MongoClient('mongodb+srv://yashtyagis2016:9qHwOvw6W9cJzc9T@cluster0.lsfl3tw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 db = client['url_shortener']
 urls_collection = db['urls']
